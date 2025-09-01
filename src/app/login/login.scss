@@ -1,0 +1,51 @@
+@use "../../variables.scss";
+.login{
+    overflow: hidden;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    &__image{
+        object-fit: cover;
+        z-index: -1;
+        grid-row: 1;
+        grid-column: 1;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__shadowDiv{
+        background-color: variables.$purple-overlay;
+        width: 200vw;
+        z-index: -1;
+        grid-row: 1;
+        grid-column: 1;
+        height: 60vh;
+        
+        transform: rotate(-27deg);
+       margin-left: -40vw;
+       margin-top: 12vh;
+        overflow: hidden;
+    }
+    &__contentDiv{
+        grid-column: 1;
+       
+       align-self: center;
+        grid-row: 1;
+    }
+    &__form{
+       display: flex;
+       justify-self: center;
+       flex-direction: column;
+       gap: 0.9375rem /* 15 / 16 = 0.9375 */
+       
+        
+    }
+    &__heading{
+    
+       
+       
+    }
+
+   
+}

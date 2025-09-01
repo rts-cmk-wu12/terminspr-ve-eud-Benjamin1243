@@ -1,0 +1,63 @@
+@use "../../../variables.scss";
+.splashScreen{
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    &__img{
+        object-fit: cover;
+        position: relative;
+    }
+    &__heading{
+        box-shadow: -5px 10px 5px rgba(0, 0, 0, 0.54);
+         -webkit-text-stroke: 0.0001px variables.$purple-stroke;
+         stroke-width: 10.1px;
+        font-size: 4.5rem /* 72 / 16 = 4.5 */;
+        margin-top: 20vh;
+      align-self: center;
+    
+      text-transform:uppercase ;
+      padding-left: 2.75rem /* 44 / 16 = 2.75 */;
+      line-height: 3rem;
+      border-bottom: 0.875rem /* 14 / 16 = 0.875 */ solid variables.$purple-border;
+      max-width: 16rem /* 242 / 16 = 15.125 */;
+      padding-bottom: 1rem;
+        z-index: 2;
+        position: relative;
+        color: variables.$heading-pink;
+        font-family: variables.$racing-sans-one;
+        text-shadow: 2px 2px 1px black;
+        &--little{
+            box-shadow: none;
+            font-family: variables.$roboto;
+            color: transparent;
+            text-shadow: none;
+             -webkit-text-stroke: 2px variables.$purple-stroke;
+             padding-left: 0;
+             padding-bottom: 0;
+             border-bottom: 0;
+ 
+
+            font-size: 2.1875rem /* 35 / 16 = 2.1875 */;
+        }
+    }
+
+    &__link{
+        width: 15.5625rem /* 249 / 16 = 15.5625 */;
+        z-index: 2;
+        padding: 1.0625rem /* 17 / 16 = 1.0625 */ 0;
+        color: variables.$text-white;
+        font-family: variables.$ubuntu;
+        position: relative;
+        background-color: variables.$purple-button;
+        justify-self: center;
+        text-align: center;
+        font-size: 1.125rem /* 18 / 16 = 1.125 */;
+        text-decoration: none;
+        border-radius: 0.625rem /* 10 / 16 = 0.625 */;
+        margin-bottom: 3.3125rem /* 53 / 16 = 3.3125 */;
+        box-shadow: 5px  10px 5px rgba(0, 0, 0, 0.556);
+    }
+}
