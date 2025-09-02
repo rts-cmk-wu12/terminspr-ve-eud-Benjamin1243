@@ -1,0 +1,22 @@
+@use "../../../variables.scss";
+.input{
+    height: 3.125rem /* 50 / 16 = 3.125 */;
+    width: 80%;
+    max-width: 31.25rem /* 500 / 16 = 31.25 */;
+    justify-self: center;
+    border: none;
+    font-family: variables.$ubuntu;
+     font-size: variables.$small-text-18;
+    padding-left: 1.375rem /* 22 / 16 = 1.375 */;
+    &--fail{
+        border: 1px solid red;
+    }
+ 
+}
+input.input::placeholder{
+color: variables.$plaholder-grey
+}
+
+input.input--fail::placeholder{
+color: red
+}

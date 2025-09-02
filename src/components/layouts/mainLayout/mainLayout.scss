@@ -1,0 +1,5 @@
+@use "../../../variables.scss";
+.mainLayout{
+    padding: 0 1.75rem /* 28 / 16 = 1.75 */;
+    background-color: variables.$purple-background-color;
+}

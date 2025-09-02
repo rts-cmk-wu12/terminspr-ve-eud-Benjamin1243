@@ -1,6 +1,6 @@
 import "./input.scss"
-export default function Input({name, placeholder}){
+export default function Input({name, placeholder, style,extraClass}){
     return(
-        <input name={name} placeholder={placeholder}/>
+        <input className={"input " + extraClass} type="text" style={style} name={name} placeholder={placeholder}/>
     )
 }

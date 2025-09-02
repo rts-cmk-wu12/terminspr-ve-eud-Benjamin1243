@@ -1,0 +1,19 @@
+@use "../../../variables.scss";
+.submitButton{
+      width: 15.5625rem /* 249 / 16 = 15.5625 */;
+        z-index: 2;
+        padding: 1.0625rem /* 17 / 16 = 1.0625 */ 0;
+        color: variables.$text-white;
+        font-family: variables.$ubuntu;
+        position: relative;
+        background-color: variables.$purple-button;
+        justify-self: center;
+        text-align: center;
+        font-size: 1.125rem /* 18 / 16 = 1.125 */;
+        margin-top: 1.875rem /* 30 / 16 = 1.875 */;
+        text-decoration: none;
+        border-radius: 0.625rem /* 10 / 16 = 0.625 */;
+        margin-bottom: 3.3125rem /* 53 / 16 = 3.3125 */;
+        border: none;
+        box-shadow: 5px  5px 5px rgba(0, 0, 0, 0.556);
+}

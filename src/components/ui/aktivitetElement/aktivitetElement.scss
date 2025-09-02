@@ -1,0 +1,47 @@
+@use  "../../../variables.scss";
+.aktivitetElement{
+    height: 40vh;
+   
+    background-position: center;
+    transition: .4s;
+   
+   
+    display: grid;
+    border-radius: 2.4375rem /* 39 / 16 = 2.4375 */;
+    background-size: cover;
+    border-bottom-right-radius: 0;
+
+    &__link{
+        text-decoration: none;
+        display: grid;
+        height: 100%;
+    }
+    &__textDiv{
+        align-self: self-end;
+        font-family: variables.$ubuntu;
+        padding-top: 1.4375rem /* 23 / 16 = 1.4375 */;
+        background-color: variables.$text-div-overlay;
+        text-decoration: none;
+         border-radius: 2.4375rem /* 39 / 16 = 2.4375 */;
+        padding-left: 1.5625rem /* 25 / 16 = 1.5625 */;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: 0;
+        align-self: end;
+        padding-bottom: 1.5625rem /* 25 / 16 = 1.5625 */;
+
+    }
+    &__heading{
+         font-size: variables.$small-text-18;
+         font-weight: 400;
+         margin-bottom: 0.5rem;
+    }
+    &__text{
+        text-decoration: none;
+           font-weight: 400;
+         font-size: variables.$small-text-18;
+    }
+
+    &:hover{
+        transform: scale(1.1);
+    }
+}

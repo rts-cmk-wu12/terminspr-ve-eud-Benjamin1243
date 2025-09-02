@@ -15,16 +15,12 @@
     }
 
     &__shadowDiv{
-        background-color: variables.$purple-overlay;
-        width: 200vw;
-        z-index: -1;
-        grid-row: 1;
-        grid-column: 1;
-        height: 60vh;
+       
+      z-index: -1;
+      
         
-        transform: rotate(-27deg);
-       margin-left: -40vw;
-       margin-top: 12vh;
+    
+  
         overflow: hidden;
     }
     &__contentDiv{
@@ -34,17 +30,39 @@
         grid-row: 1;
     }
     &__form{
+        width: 100%;
+    justify-content: center;
        display: flex;
-       justify-self: center;
+      align-content: center;
+      align-items: center;
+       z-index: 2;
        flex-direction: column;
        gap: 0.9375rem /* 15 / 16 = 0.9375 */
        
         
     }
     &__heading{
-    
+    max-width: 31.25rem /* 500 / 16 = 31.25 */;
+    width: 80%;
+    font-weight: 500;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 0.625rem /* 10 / 16 = 0.625 */;
+    font-family: variables.$ubuntu;
+    color: variables.$text-white;
+    font-size: calc(variables.$big-heading-36 + 0.75rem /* 12 / 16 = 0.75 */);
        
-       
+    }
+    &__error{
+         max-width: 31.25rem /* 500 / 16 = 31.25 */;
+    width: 80%;
+    font-weight: 500;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 0.625rem /* 10 / 16 = 0.625 */;
+    font-family: variables.$ubuntu;
+    color: red;
+    font-size: variables.$big-heading-36 ;
     }
 
    

@@ -1,0 +1,58 @@
+@use "../../variables.scss";
+.topImage{
+    height: 50vh;
+    display: grid;
+    background-size: cover;
+    align-content: end;
+    justify-content: end;
+    padding-right: 1.6875rem /* 27 / 16 = 1.6875 */;
+    &__overlay{
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.722);
+        height: 100vh;
+        width: 100%;
+        
+        display: grid;
+        z-index: 10;
+        align-content: center;
+    }
+    &__link{
+        display: inline;
+         font-size: variables.$middle-text-24;
+         color: white;
+         font-family: variables.$ubuntu;
+         text-decoration: none;
+         background-color: white;
+         color: black;
+         padding: 1rem;
+border-radius: 1.125rem /* 18 / 16 = 1.125 */;
+border: 1pxsolid black;
+    }
+    &__text{
+        text-align: center;
+       
+        max-width: 80%;
+        margin: 0 auto;
+        font-size: variables.$middle-text-24;
+        color: white;
+        font-family: variables.$ubuntu;
+    }
+    &__selectDiv{
+        padding-top: 1rem;
+        justify-content: space-between;
+        width: 80%;
+        max-width: 31.25rem /* 500 / 16 = 31.25 */;
+        margin: 0 auto;
+        display: flex;
+    }
+    &__button{
+       border-radius: 1.125rem /* 18 / 16 = 1.125 */;
+         background-color: rgb(222, 222, 222);
+         color: black;
+          font-size: variables.$middle-text-24;
+      padding: 1rem;
+         font-family: variables.$ubuntu;
+border: none;
+    }
+    
+}
