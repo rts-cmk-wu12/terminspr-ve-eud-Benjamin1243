@@ -1,6 +1,7 @@
 @use "../../../variables.scss";
 .topHeading{
     padding-top: 2rem /* 32 / 16 = 2 */;
+    padding-bottom: 2rem;
     font-size: variables.$big-heading-36;
     font-family: variables.$ubuntu;
     color: variables.$heading-white;

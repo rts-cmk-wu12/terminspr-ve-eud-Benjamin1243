@@ -2,19 +2,28 @@
 import Image from "next/image";
 import "./topImage.scss"
 import SubmitButton from "../ui/submitButton/SubmitButton";
-import tilmeldAktivitet from "@/actions/tilmeldAktivitet";
+
 import { useActionState, useEffect, useState } from "react";
 import Link from "next/link";
+import tilmeldOgAfmeldAktivitet from "@/actions/tilmeldOgAfmeldAktivitet";
 
-export default function TopImage({img, maxAge, minAge}){
-        const [formState, formActionTilmeld, isPending] = useActionState(tilmeldAktivitet, {maxAge: maxAge, minAge: minAge})
+export default function TopImage({img, maxAge, minAge, aktivitetsId, isRegistered}){
+        const [formState, formActionTilmeld, isPending] = useActionState(tilmeldOgAfmeldAktivitet, {maxAge: maxAge, minAge: minAge})
         const [loginFail, setLoginFail] = useState(false)
+        const [message, setMessage] = useState("")
         useEffect(()=>{
             console.log(formState)
-            if(formState?.errorCode == 401){
+            if(formState?.statusCode == 401){
                 setLoginFail(true)
 
             }
+            
+                setMessage(formState.message)
+
+            
+            setTimeout(()=>{
+                setMessage( null)
+            }, 4000)
         }, [formState])
 
     return(
@@ -30,8 +39,13 @@ export default function TopImage({img, maxAge, minAge}){
             <form action={formActionTilmeld}>
                 <input type="hidden" name="maxAge" value={maxAge} />
                 <input type="hidden" name="minAge" value={minAge} />
-                <SubmitButton className="">Tilmeld</SubmitButton>
+                 <input type="hidden" name="id" value={aktivitetsId} />
+                 <input type="hidden" name="registered" value={isRegistered} /> 
+                <SubmitButton className="">{isRegistered ? "Afmeld":"Tilmeld"}</SubmitButton>
             </form>
+          { message && <div  className={formState.message &&"topImage__messageBox"}>
+            <p className="topImage__message">{formState.message}</p>
+            </div>}
     
         </div>
     )

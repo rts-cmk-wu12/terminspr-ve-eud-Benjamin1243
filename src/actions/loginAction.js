@@ -65,7 +65,7 @@ console.log("burgernavn",  validatedLogin.data.brugernavn)
      //hvis alt går som det skal sætter vi nu cookien
      const cookieStore = await cookies()
      cookieStore.set("token",user.token,  {maxAge: user.validUntil})
-     cookieStore.set("userId", user.userId, {maxAge: user.validUntil})
+     cookieStore.set("userId", user.userId, {maxAge: user.validUntil * 60*30})
      return{
         success : true,
         errors: [""]

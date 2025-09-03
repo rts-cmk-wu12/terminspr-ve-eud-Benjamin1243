@@ -54,5 +54,36 @@ border: 1pxsolid black;
          font-family: variables.$ubuntu;
 border: none;
     }
-    
+    &__messageBox{
+         position: absolute;
+        
+         animation-name: messagebox;
+        animation-duration: 4s;
+         width: 100%;
+         padding: 1rem;
+
+    }
+    &__message{
+        color: white;
+        font-size:  variables.$small-text-18;
+        font-family: variables.$ubuntu;
+        text-align: center;
+        animation-name: message;
+        animation-duration: 1s;
+        color: white;
+
+        
+       
+    }
+}
+
+
+
+@keyframes messagebox {
+  from {background-color: transparent;}
+  to {background-color: black;}
+}
+@keyframes message {
+  from {margin-left: -100%; color: transparent;}
+  to {margin-left: 0%; color: white;}
 }

@@ -1,0 +1,45 @@
+@use "../../../variables.scss";
+.searchBar{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    height: 3rem /* 48 / 16 = 3 */;
+     padding-left: 0.75rem /* 12 / 16 = 0.75 */;
+    &__input{
+        transition: 0.4s;
+        border: none;
+        padding-left: 1rem;
+        font-size: variables.$middle-text-24;
+        color: variables.$heading-white;
+        height: 100%;
+        font-family: variables.$ubuntu;
+        width: 100%;
+        grid-column: 1/-1;
+        grid-row: 1/-1;
+        background-color: #c4c4c471;
+    }
+    &__button{
+          grid-column: 1/-1;
+          padding-right: 1rem;
+        grid-row: 1/-1;
+        justify-self: end;
+        background-color: transparent;
+        border: none;
+    }
+    &__logo{
+         grid-column: 1/-1;
+         color: variables.$heading-white;
+        grid-row: 1/-1;
+        justify-self: end;
+        font-size: variables.$middle-text-24;
+        align-self: center;
+       
+
+    }
+}
+
+.searchBar__input:focus{
+    outline: none;
+    transform: scale(1.05);
+}

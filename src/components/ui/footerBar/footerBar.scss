@@ -1,0 +1,37 @@
+@use "../../../variables.scss";
+.footer{
+    position: fixed;
+   
+    bottom: 0;
+    width: 100%;
+    
+    &__list{
+        display: flex;
+        padding: 0 1rem;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 4.125rem /* 66 / 16 = 4.125 */;
+        background-color: variables.$footer-background;
+    }
+    &__listItem{
+        list-style: none;
+      
+    }
+    &__link{
+        display: grid;
+        place-items: center;
+          border: 1px solid black;
+         padding: 0.5rem;
+         border-radius: 100%;
+       
+       
+    }
+    &__logo{
+          font-size: variables.$middle-text-24;
+          color: black;
+        
+       
+    }
+
+}

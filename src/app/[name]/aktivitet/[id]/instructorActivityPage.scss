@@ -1,0 +1,14 @@
+@use "../../../../variables.scss";
+.instructorDetailSection{
+    &__heading{
+        color: variables.$heading-white;
+        font-size: variables.$middle-text-24;
+        font-family: variables.$ubuntu;
+
+    }
+    &__text{
+        color: variables.$heading-white;
+        font-size: variables.$small-text-18;
+        font-family: variables.$ubuntu;
+    }
+}

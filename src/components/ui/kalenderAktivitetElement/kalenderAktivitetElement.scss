@@ -1,0 +1,25 @@
+@use "../../../variables.scss";
+.kalenderAktivitet{
+   
+    border-radius: 0.6875rem /* 11 / 16 = 0.6875 */;
+
+    background-color: variables.$heading-white;
+    height: 6.6875rem /* 107 / 16 = 6.6875 */;
+
+    &__link{
+        text-decoration: none;
+        height: 100%;
+         display: grid;
+    place-content: center;
+    }
+    &__heading{
+        font-family: variables.$ubuntu;
+        font-weight: 400;
+        font-size: variables.$big-heading-36;
+    }
+    &__text{
+        font-family: variables.$ubuntu;
+        font-size: variables.$small-text-18;
+        text-transform:capitalize;
+    }
+}
