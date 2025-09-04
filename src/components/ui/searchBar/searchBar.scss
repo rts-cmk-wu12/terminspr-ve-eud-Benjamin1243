@@ -1,6 +1,7 @@
 @use "../../../variables.scss";
 .searchBar{
     width: 100%;
+    margin-bottom: 3.4375rem /* 55 / 16 = 3.4375 */;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;

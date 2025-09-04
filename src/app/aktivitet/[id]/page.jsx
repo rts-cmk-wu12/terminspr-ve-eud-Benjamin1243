@@ -2,6 +2,26 @@ import TopImage from "@/components/topImage/TopImage";
 import "./aktivitet.scss"
 import { cookies } from "next/headers";
 import FooterBar from "@/components/ui/footerBar/FooterBar";
+//her er min fetch til at få dynamisk meta data, meget smart
+
+export async function generateMetadata({ params, searchParams }, parent) {
+  // read route params
+
+
+   const {id} =  await params
+    const response = await fetch("http://localhost:4000/api/v1/activities/" +id)
+    const data = await response.json();
+     
+
+
+  return {
+    title: data.name,
+    
+  }
+
+
+
+}
 
 
 export default async function Aktivitet({params}){

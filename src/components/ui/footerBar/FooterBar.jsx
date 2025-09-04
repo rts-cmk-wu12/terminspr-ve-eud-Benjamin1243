@@ -13,7 +13,7 @@ export default  function FooterBar(){
             <nav className="footer__nav"><ul className="footer__list">
                 <li className="footer__listItem"><Link className="footer__link" href={"/aktiviteter"}><LuHouse className="footer__logo" />
 </Link></li>
-                <li className="footer__listItem"><Link className="footer__link" href={"/searchActivities"}><CiSearch className="footer__logo" /></Link></li>
+                <li className="footer__listItem"><Link className="footer__link" href={"/search"}><CiSearch className="footer__logo" /></Link></li>
                 <li className="footer__listItem"><Link className="footer__link" href={"/kalender"}><CiCalendar className="footer__logo" /></Link></li>
                 
                 

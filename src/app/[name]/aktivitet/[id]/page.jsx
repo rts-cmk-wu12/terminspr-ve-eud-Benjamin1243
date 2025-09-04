@@ -20,7 +20,7 @@ export default async function instructorActivityPage({params}){
                 <h2 className="instructorDetailSection__heading">Instruktører: </h2>
                 {data.users.map((user, index)=>{
                     if(user.role == "instructor"){
-                        return <p className="instructorDetailSection__text" key={user.name + index}> {user.firstname + " " +user.lastname}</p>
+                        return <p className="instructorDetailSection__text" key={user.firstnamename + index}> {user.firstname + " " +user.lastname}</p>
                     }
                 })}
                 </section>
@@ -29,7 +29,7 @@ export default async function instructorActivityPage({params}){
                 <h2 className="instructorDetailSection__heading">Deltagere: </h2>
                 {data.users.map((user, index)=>{
                     if(user.role == "default"){
-                        return <p className="instructorDetailSection__text" key={user.name + index}> {user.firstname + " " +user.lastname}</p>
+                        return <p className="instructorDetailSection__text" key={user.firstname + index}> {user.firstname + " " +user.lastname}</p>
                     }
                 })}
                 </section>

@@ -60,12 +60,14 @@ console.log("burgernavn",  validatedLogin.data.brugernavn)
      const user = await response.json()
      console.log(user)
   
+     console.log(user.validUntil/1000)
 
 
      //hvis alt går som det skal sætter vi nu cookien
      const cookieStore = await cookies()
-     cookieStore.set("token",user.token,  {maxAge: user.validUntil})
-     cookieStore.set("userId", user.userId, {maxAge: user.validUntil * 60*30})
+     //da jeg syntes apiet manglet docs, gik jeg ind på det og læst det ubløb om en time, så det hardcodede jeg bare ind, sorry Brian
+     cookieStore.set("token",user.token,  {maxAge: 3600})
+     cookieStore.set("userId", user.userId, {maxAge: 3600})
      return{
         success : true,
         errors: [""]

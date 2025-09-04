@@ -5,6 +5,11 @@ import TopHeading from "@/components/ui/topHeading/TopHeading"
 import { cookies } from "next/headers"
 import "./kalender.scss"
 
+
+export const metadata = {
+  title: "Kalender",
+  description: 'Din personlige aktivitets kalender',
+}
 export default async function Kalender(){
   
     const cookieStore = await cookies()

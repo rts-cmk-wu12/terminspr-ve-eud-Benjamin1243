@@ -50,6 +50,8 @@ if(registered == "true"){
         statusCode: 401
      }
     }
+
+    console.log( "user-id", cookieStore.get("userId").value)
     //nu er det tid til at fetche useren og tjekke om useren er gammel nok
    const response = await fetch("http://localhost:4000/api/v1/users/" + cookieStore.get("userId").value,{
         headers:{
@@ -60,15 +62,17 @@ if(registered == "true"){
 
     
     const user = await response.json()
+    console.log("rollie", user.role)
   
     //her tjekker vi alder
+    if(user.role !== "instructor"){
     if(user.age < minAge || user.age > maxAge && user.role !== "instructor"){
         return {
             success: false,
             message: ["din alder er desværre ikke tilstræklig for denne aktivitet"],
              statusCode: 403
         }
-    }
+    }}
     //hvis alt går som det skal skal vi nu tilføje brugren
     const postReponse = await fetch(`http://localhost:4000/api/v1/users/${cookieStore.get("userId").value}/activities/${id}`,{
         headers:{

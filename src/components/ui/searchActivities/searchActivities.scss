@@ -1,0 +1,7 @@
+@use "../../../variables.scss";
+.fejlbesked{
+font-size: variables.$middle-text-24;
+text-align: center;
+font-family: variables.$ubuntu;
+color: white;
+}

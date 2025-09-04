@@ -11,7 +11,7 @@ export default function SplashScreen(){
        <Image className="splashScreen__img" src="/images/splash-image.jpg" alt="splashScreen" fill={true}></Image>
        <h1 className="splashScreen__heading"><span className="splashScreen__heading splashScreen__heading--little">landrup</span><br /> dans</h1>
 
-       <Link className="splashScreen__link" href={"login"}>Kom i gang</Link>
+       <Link className="splashScreen__link" href={"/aktiviteter"}>Kom i gang</Link>
        </div>
        
 

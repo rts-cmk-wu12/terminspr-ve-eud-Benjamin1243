@@ -1,4 +1,4 @@
-@use "../../variables.scss";
+@use "../../../variables.scss";
 .login{
     overflow: hidden;
     height: 100vh;
@@ -63,6 +63,12 @@
     font-family: variables.$ubuntu;
     color: red;
     font-size: variables.$big-heading-36 ;
+    }
+    &__text{
+         font-size: variables.$middle-text-24 ;
+   font-family: variables.$ubuntu;
+     text-align: center;
+     color: white;
     }
 
    
