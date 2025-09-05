@@ -9,8 +9,8 @@ import "./searchActivities.scss"
 export default function SearchActivities(){
     const [searchedData, setSearchedData] = useState()
     return(
-        <MainLayout>
-            <TopHeading>Søg</TopHeading>
+        <MainLayout heading="Søg">
+           
             <SearchBar setState={setSearchedData}></SearchBar>
             <ListShow>
                 { searchedData?.length >0 ?searchedData?.map((aktivitet, index)=>{

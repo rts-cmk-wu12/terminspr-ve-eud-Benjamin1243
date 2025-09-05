@@ -13,8 +13,8 @@ export default async function instructorActivityPage({params}){
 
 
     return (
-        <MainLayout>
-            <TopHeading>{data.name}</TopHeading>
+        <MainLayout heading={data.name}>
+           
             <ListShow>
                 <section className="instructorDetailSection">
                 <h2 className="instructorDetailSection__heading">Instruktører: </h2>

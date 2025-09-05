@@ -59,5 +59,12 @@
         border-radius: 0.625rem /* 10 / 16 = 0.625 */;
         margin-bottom: 3.3125rem /* 53 / 16 = 3.3125 */;
         box-shadow: 5px  10px 5px rgba(0, 0, 0, 0.556);
+        animation-name: knapAnimation;
+        animation-duration: 1500ms;
     }
+}
+
+@keyframes knapAnimation {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }

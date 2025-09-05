@@ -16,8 +16,8 @@ export default function Aktiviteter(){
    
     console.log(activities)
     return(
-      <MainLayout>
-       <TopHeading>Aktiviteter</TopHeading>
+      <MainLayout heading="Aktiviteter">
+      
        <ListShow>
         {activities?.map((aktivitet, index)=>{
             return(

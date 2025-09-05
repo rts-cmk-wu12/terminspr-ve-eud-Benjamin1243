@@ -23,3 +23,18 @@
         padding-bottom: 0.625rem /* 10 / 16 = 0.625 */;
     }
 }
+
+
+@media only screen and (min-width: 1000px) {
+.aktivitet{
+    &__textInfoDiv{
+        height: 50vh;
+        max-width: 93.75rem /* 1500 / 16 = 93.75 */;
+        width: 60%;
+        margin: 0 auto;
+       
+        padding: 0 1vw;
+        background-color: variables.$purple-background-color;
+    }
+}
+}

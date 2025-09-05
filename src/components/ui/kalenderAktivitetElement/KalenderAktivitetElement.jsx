@@ -7,6 +7,9 @@ export default function KalenderAktivitetElement({heading, date, id, role,name})
         link = `/${name}/aktivitet/` + id
 
     }
+    if(heading.length > 16){
+         heading = heading.slice(0, 16) + "...."
+    }
     return(
     <article  className="kalenderAktivitet">
         <Link className="kalenderAktivitet__link" href={link}>

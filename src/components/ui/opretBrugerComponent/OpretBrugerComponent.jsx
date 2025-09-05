@@ -53,7 +53,7 @@ export default function OpretBrugerComponent(){
 
 
 
-                <SubmitButton>{isPending? "Loggger ind..." :"Log ind"   }</SubmitButton>
+                <SubmitButton>{isPending? "Opretter bruger..." :"Opret Bruger"   }</SubmitButton>
                
 
             </form>

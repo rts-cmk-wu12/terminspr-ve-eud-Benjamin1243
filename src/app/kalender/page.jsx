@@ -24,8 +24,8 @@ export default async function Kalender(){
 
 
     return(
-        <MainLayout>
-            <TopHeading>Kalender</TopHeading>
+        <MainLayout heading="Kalender">
+           
             <ListShow>
                 {user.activities.length > 0 ? user.activities.map((activity, index)=>{
                    return(<KalenderAktivitetElement name={user.firstname} role={user.role} id={activity.id} key={activity.name + index} heading={activity.name} date={activity.weekday + " " + activity.time} ></KalenderAktivitetElement>)

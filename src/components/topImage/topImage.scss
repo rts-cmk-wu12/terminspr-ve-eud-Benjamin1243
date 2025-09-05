@@ -18,6 +18,7 @@
     }
     &__link{
         display: inline;
+        text-align: center;
          font-size: variables.$middle-text-24;
          color: white;
          font-family: variables.$ubuntu;
@@ -44,8 +45,10 @@ border: 1pxsolid black;
         max-width: 31.25rem /* 500 / 16 = 31.25 */;
         margin: 0 auto;
         display: flex;
+        gap: 3rem;
     }
     &__button{
+        text-align: center;
        border-radius: 1.125rem /* 18 / 16 = 1.125 */;
          background-color: rgb(222, 222, 222);
          color: black;
@@ -81,9 +84,20 @@ border: none;
 
 @keyframes messagebox {
   from {background-color: transparent;}
-  to {background-color: black;}
+  to {background-color: variables.$purple-background-color;}
 }
 @keyframes message {
   from {margin-left: -100%; color: transparent;}
   to {margin-left: 0%; color: white;}
+}
+
+@media only screen and (min-width: 1000px) {
+    main{
+        background-color: variables.$purple-background-color;
+    }
+.topImage{
+     max-width: 93.75rem /* 1500 / 16 = 93.75 */;
+        width: 70%;
+    margin: 0 auto;
+}
 }

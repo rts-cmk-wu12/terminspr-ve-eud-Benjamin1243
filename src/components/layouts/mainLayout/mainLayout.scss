@@ -1,7 +1,16 @@
 @use "../../../variables.scss";
-.mainLayout{
-    padding: 0 1.75rem /* 28 / 16 = 1.75 */;
+.mainLayoutWrapper{
+   
     background-color: variables.$purple-background-color;
-    min-height: 100vh;
-    padding-bottom: 5rem;
+   
+    &__header{
+ padding: 0 1.75rem /* 28 / 16 = 1.75 */;
+    }
+    &__main{
+        
+        
+          min-height: 100vh;
+           padding: 0 1.75rem /* 28 / 16 = 1.75 */;
+            padding-bottom: 5rem;
+    }
 }
